@@ -14,9 +14,8 @@
   }
 }
 
-// Повторяем базовые стили карточки авторизации
 .auth-card {
-  max-width: 500px; // Форма входа компактнее, чем регистрация
+  max-width: 500px;
   width: 100%;
   background: #ffffff;
   padding: 50px;
@@ -88,7 +87,7 @@
 
     &:focus {
       outline: none;
-      border-color: #ffb703;
+      border-color: $color-orange-hover;
       box-shadow: 0 0 0 2px rgba(255, 183, 3, 0.2);
     }
 
@@ -107,7 +106,7 @@
   }
 
   &__submit-btn {
-    background-color: #ffb703;
+    background-color: $color-orange;
     color: #ffffff;
     border: none;
     border-radius: 6px;
@@ -120,7 +119,7 @@
       transform 0.1s ease;
 
     &:hover {
-      background-color: #f1a208;
+      background-color: $color-orange-hover;
     }
 
     &:active {
@@ -135,13 +134,13 @@
 
   &__link {
     font-size: 14px;
-    color: #ffb703;
+    color: $color-orange;
     text-decoration: none;
     transition: color 0.2s ease;
 
     &:hover {
       text-decoration: underline;
-      color: #f1a208;
+      color: $color-orange-hover;
     }
   }
 }

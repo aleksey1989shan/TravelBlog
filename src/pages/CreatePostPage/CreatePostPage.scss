@@ -66,7 +66,7 @@
       background-color 0.2s ease;
 
     &:hover {
-      border-color: #ffb703;
+      border-color: $color-orange-hover;
       background-color: #fffdf8;
     }
   }
@@ -120,7 +120,7 @@
 
     &:focus {
       outline: none;
-      border-color: #ffb703;
+      border-color: $color-orange-hover;
     }
 
     &:disabled {
@@ -154,8 +154,8 @@
 
   &__btn-back {
     background: #ffffff;
-    border: 1.5px solid #ffb703;
-    color: #ffb703;
+    border: 1.5px solid $color-orange;
+    color: $color-orange;
     padding: 12px 32px;
     font-size: 14px;
     font-weight: 600;
@@ -166,7 +166,7 @@
       color 0.2s ease;
 
     &:hover:not(:disabled) {
-      background-color: #ffb703;
+      background-color: $color-orange-hover;
       color: #ffffff;
     }
 
@@ -177,7 +177,7 @@
   }
 
   &__btn-submit {
-    background-color: #ffb703;
+    background-color: $color-orange;
     color: #ffffff;
     border: none;
     padding: 14px 40px;
@@ -188,7 +188,7 @@
     transition: background-color 0.2s ease;
 
     &:hover:not(:disabled) {
-      background-color: #f1a208;
+      background-color: $color-orange-hover;
     }
 
     &:disabled {
@@ -198,7 +198,6 @@
   }
 }
 
-// Адаптация для планшетов и смартфонов
 @media (max-width: 768px) {
   .create-post {
     padding: 24px 16px;

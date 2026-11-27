@@ -48,7 +48,7 @@
   &__change-photo-btn {
     background: none;
     border: none;
-    color: #ffb703;
+    color: $color-orange;
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
@@ -105,7 +105,7 @@
     }
 
     &:hover {
-      color: #ffb703;
+      color: $color-orange-hover;
     }
   }
 

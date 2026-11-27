@@ -77,13 +77,13 @@
     font-family: sans-serif;
     font-size: 14px;
     font-weight: 600;
-    color: #f1c40f;
+    color: $color-orange;
     text-decoration: underline;
     display: inline-block;
     transition: color 0.2s ease;
 
     &:hover {
-      color: #d4ac0d;
+      color: $color-orange-hover;
     }
   }
 }

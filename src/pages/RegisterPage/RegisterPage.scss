@@ -95,10 +95,9 @@
       color: #c0c0c0;
     }
 
-    // Стили фокуса для клавиатурной доступности
     &:focus {
       outline: none;
-      border-color: #ffb703;
+      border-color: $color-orange-hover;
       box-shadow: 0 0 0 2px rgba(255, 183, 3, 0.2);
     }
 
@@ -113,7 +112,7 @@
   }
 
   &__submit-btn {
-    background-color: #ffb703;
+    background-color: $color-orange;
     color: #ffffff;
     border: none;
     border-radius: 6px;
@@ -126,7 +125,7 @@
       transform 0.1s ease;
 
     &:hover {
-      background-color: #f1a208;
+      background-color: $color-orange-hover;
     }
 
     &:focus-visible {
@@ -145,7 +144,6 @@
   }
 }
 
-// Адаптивность для планшетов и мобильных телефонов
 @media (max-width: 600px) {
   .auth-card {
     padding: 30px 20px;

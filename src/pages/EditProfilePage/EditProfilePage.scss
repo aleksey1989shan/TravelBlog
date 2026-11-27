@@ -55,7 +55,7 @@
   &__change-photo-btn {
     background: none;
     border: none;
-    color: #ffb703;
+    color: $color-orange;
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
@@ -122,7 +122,7 @@
 
     &:focus {
       outline: none;
-      border-color: #ffb703;
+      border-color: $color-orange-hover;
     }
 
     &:disabled {
@@ -175,8 +175,8 @@
 
   &__btn-back {
     background: none;
-    border: 2px solid #ffb703; // Рамка цвета бренда как на макете
-    color: #ffb703;
+    border: 2px solid $color-orange;
+    color: $color-orange;
     padding: 12px 36px;
     font-size: 14px;
     font-weight: 600;
@@ -187,13 +187,13 @@
       color 0.2s;
 
     &:hover {
-      background-color: #ffb703;
+      background-color: $color-orange-hover;
       color: #ffffff;
     }
   }
 
   &__btn-submit {
-    background-color: #ffb703; // Сплошная заливка
+    background-color: $color-orange;
     color: #ffffff;
     border: none;
     padding: 14px 44px;
@@ -204,7 +204,7 @@
     transition: background-color 0.2s;
 
     &:hover {
-      background-color: #f1a208;
+      background-color: $color-orange-hover;
     }
   }
 }
