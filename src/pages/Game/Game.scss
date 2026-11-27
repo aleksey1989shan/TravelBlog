@@ -1,0 +1,135 @@
+.game-page {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  &__container {
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 680px;
+    width: 100%;
+  }
+
+  &__header {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111111;
+    margin: 0;
+  }
+
+  &__score {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333333;
+
+    span {
+      color: #ffb703;
+      font-weight: 700;
+    }
+  }
+
+  &__board {
+    position: relative;
+    border: 4px solid #222222;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #0b0c10;
+    line-height: 0;
+  }
+
+  &__canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(11, 12, 16, 0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+  }
+
+  &__result {
+    font-size: 28px;
+    color: #ffb703;
+    margin: 0 0 12px 0;
+    letter-spacing: 1px;
+  }
+
+  &__final-score {
+    font-size: 18px;
+    margin: 0 0 24px 0;
+  }
+
+  &__btn {
+    background-color: #ffb703;
+    color: #111111;
+    border: none;
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition:
+      transform 0.1s ease,
+      background-color 0.2s ease;
+
+    &:hover {
+      background-color: #f1a208;
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+  }
+
+  &__controls {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666666;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__back-link {
+    color: #ffb703;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
