@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Game.scss";
+import Fang from "../../assets/Fang-Basic.png";
 
 interface Bullet {
   x: number;
@@ -30,6 +31,10 @@ export const Game: React.FC = () => {
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
+
+    // игрок
+    const playerImg = new Image();
+    playerImg.src = Fang;
 
     // Размеры игрового поля
     const WIDTH = 600;
@@ -91,14 +96,12 @@ export const Game: React.FC = () => {
 
     // Отрисовка пиксельного корабля игрока
     const drawPlayer = () => {
-      ctx.fillStyle = "#ffffff";
-      ctx.fillRect(player.x + 16, player.y, 8, 8); // Нос
-      ctx.fillRect(player.x + 8, player.y + 8, 24, 8); // Корпус
-      ctx.fillRect(player.x, player.y + 16, 40, 8); // Крылья
-      // Красные акценты как в Galaxian
-      ctx.fillStyle = "#ff4d4f";
-      ctx.fillRect(player.x, player.y + 12, 4, 8);
-      ctx.fillRect(player.x + 36, player.y + 12, 4, 8);
+      // Рисуем картинку только когда она полностью загрузилась в память
+      if (playerImg.complete) {
+        // Отключаем сглаживание, чтобы пиксели оставались четкими и не мылились!
+        ctx.imageSmoothingEnabled = false;
+        ctx.drawImage(playerImg, player.x, player.y, player.width, player.height);
+      }
     };
 
     // Отрисовка пиксельной "мушки"
@@ -243,7 +246,7 @@ export const Game: React.FC = () => {
     <div className="game-page">
       <div className="game-page__container">
         <div className="game-page__header">
-          <h1 className="game-page__title">(игра в разработке что-то может не работать!)</h1>
+          <h1 className="game-page__title">(игра в разработке, что-то может не работать!)</h1>
           <div className="game-page__score">
             Очки: <span>{score}</span>
           </div>
@@ -265,7 +268,7 @@ export const Game: React.FC = () => {
 
         <div className="game-page__controls">
           <p>
-            Управление: <strong>← →</strong> (или <strong>A / D</strong>) — движение, <strong>Пробел</strong> — огонь
+            Управление: <strong>← →</strong> (или <strong>A / D</strong>) — движение, <strong>Пробел</strong> — огонь, <strong>G</strong> — суперудар
           </p>
           <Link to="/" className="game-page__back-link">
             ← Вернуться в блог
