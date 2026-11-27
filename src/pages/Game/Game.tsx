@@ -178,13 +178,6 @@ export const Game: React.FC = () => {
 
       if (hitEdge) {
         enemyDirection *= -1;
-        aliveEnemies.forEach((e) => {
-          e.y += 18; // Спускаются ниже при ударе о край
-          if (e.y + e.height >= player.y) {
-            isGameActive = false;
-            setGameState("gameover");
-          }
-        });
       }
 
       // Случайные выстрелы "мушек"
